@@ -1,12 +1,19 @@
 import React from 'react'
 import { render } from 'react-dom'
+import { App } from './components/App'
+import { DispatchContext } from './DispatchContext'
 
 import './style.scss'
 
-const App = () => (
-  <div className="App">
-    <h1>Hello World</h1>
-  </div>
-)
+const initialState = { color: '', hex: '' }
 
-render(<App />, document.getElementById('root'))
+function reducer(state, action) {
+  return { ...state, [action.field]: action.value }
+}
+
+render(
+  <DispatchContext reducerFn={reducer} initialState={initialState}>
+    <App />
+  </DispatchContext>,
+  document.getElementById('root')
+)
