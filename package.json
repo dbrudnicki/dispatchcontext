@@ -1,0 +1,31 @@
+{
+  "name": "dispatchcontext",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dbrudnicki/dispatchcontext.git",
+  "author": "dbrudnicki <dbrudnicki@nmetric.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./public/index.html --port 5555",
+    "clean": "rm -rf node_modules & rm -rf .parcel-cache & rm -rf dist && yarn"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reactstrap": "^8.9.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/reactstrap": "^8.7.2",
+    "bootstrap": "^4.6.0",
+    "parcel": "^2.0.0-beta.2"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true
+  }
+}
