@@ -12,7 +12,6 @@ export const Right = () => {
         <Input
           id="hex"
           type="text"
-          autoFocus
           value={state.hex}
           onChange={(e) =>
             dispatch({ field: 'hex', value: e.currentTarget.value })
